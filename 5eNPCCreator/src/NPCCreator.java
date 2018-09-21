@@ -39,6 +39,7 @@ public class NPCCreator {
         Scanner mannerismScan = new Scanner(new File("inputfiles/mannerisms.txt"));
         Scanner talentScan = new Scanner(new File("inputfiles/talents.txt"));
         
+        //Fill ArrayLists with parsed data.
         while (appearanceScan.hasNext()){
             appearanceList.add(appearanceScan.nextLine());
         }
@@ -68,6 +69,10 @@ public class NPCCreator {
         }
         
         
+        
+        
+        
+        //TODO call npuGUI
         
     }
     
