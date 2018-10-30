@@ -23,21 +23,16 @@ public class NPCCreator {
     protected static ArrayList<String> talentList = new ArrayList();
     
     
-    
-    public static void main(String[] args) throws java.io.FileNotFoundException {
-        
-        
-        
-        //Instantiate scanners for input files.
-        Scanner appearanceScan = new Scanner(new File("inputfiles/appearance.txt"));
-        Scanner bondScan = new Scanner(new File("inputfiles/bonds.txt"));
-        Scanner flawsScan = new Scanner(new File("inputfiles/flawsandsecrets.txt"));
-        Scanner highAbScan = new Scanner(new File("inputfiles/highability.txt"));
-        Scanner lowAbScan = new Scanner(new File("inputfiles/lowability.txt"));
-        Scanner idealsScan = new Scanner(new File("inputfiles/ideals.txt"));
-        Scanner interactionScan = new Scanner(new File("inputfiles/interactions.txt"));
-        Scanner mannerismScan = new Scanner(new File("inputfiles/mannerisms.txt"));
-        Scanner talentScan = new Scanner(new File("inputfiles/talents.txt"));
+    public NPCCreator() throws java.io.FileNotFoundException {
+        Scanner appearanceScan = new Scanner(new File("src/inputfiles/appearences.txt"));
+        Scanner bondScan = new Scanner(new File("src/inputfiles/bonds.txt"));
+        Scanner flawsScan = new Scanner(new File("src/inputfiles/flawsandsecrets.txt"));
+        Scanner highAbScan = new Scanner(new File("src/inputfiles/highability.txt"));
+        Scanner lowAbScan = new Scanner(new File("src/inputfiles/lowability.txt"));
+        Scanner idealsScan = new Scanner(new File("src/inputfiles/ideals.txt"));
+        Scanner interactionScan = new Scanner(new File("src/inputfiles/interactions.txt"));
+        Scanner mannerismScan = new Scanner(new File("src/inputfiles/mannerism.txt"));
+        Scanner talentScan = new Scanner(new File("src/inputfiles/talent.txt"));
         
         //Fill ArrayLists with parsed data.
         while (appearanceScan.hasNext()){
@@ -67,12 +62,17 @@ public class NPCCreator {
         while (talentScan.hasNext()){
             talentList.add(talentScan.nextLine());
         }
+    }
+    
+    
+    public static void main(String[] args) throws java.io.FileNotFoundException {
         
         
         
+        //Instantiate scanners for input files.
         
         
-        //TODO call npuGUI
+        //TODO call npcGUI
         
     }
     

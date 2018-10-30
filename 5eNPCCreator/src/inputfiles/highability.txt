@@ -2,5 +2,5 @@ Strength - Powerful, brawny, strong as an ox
 Dexterity - lithe, agile, graceful
 Constitution - hardy, hale, healthy
 Intelligence - studio, learned, inquisitive
-Wisdon - perceptive, spiritual, insightful
+Wisdom - perceptive, spiritual, insightful
 Charisma - persuasive, forceful, born leader
