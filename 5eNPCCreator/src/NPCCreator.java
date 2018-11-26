@@ -6,7 +6,7 @@
 
 /**
  *
- * @author B0603587
+ * @author B0603587 and K1110172
  */
     import java.io.*;
     import java.util.*;
@@ -24,15 +24,15 @@ public class NPCCreator {
     
     
     public NPCCreator() throws java.io.FileNotFoundException {
-        Scanner appearanceScan = new Scanner(new File("src/inputfiles/appearences.txt"));
-        Scanner bondScan = new Scanner(new File("src/inputfiles/bonds.txt"));
-        Scanner flawsScan = new Scanner(new File("src/inputfiles/flawsandsecrets.txt"));
-        Scanner highAbScan = new Scanner(new File("src/inputfiles/highability.txt"));
-        Scanner lowAbScan = new Scanner(new File("src/inputfiles/lowability.txt"));
-        Scanner idealsScan = new Scanner(new File("src/inputfiles/ideals.txt"));
-        Scanner interactionScan = new Scanner(new File("src/inputfiles/interactions.txt"));
-        Scanner mannerismScan = new Scanner(new File("src/inputfiles/mannerism.txt"));
-        Scanner talentScan = new Scanner(new File("src/inputfiles/talent.txt"));
+        Scanner appearanceScan = new Scanner(this.getClass().getResourceAsStream("inputfiles/appearences.txt"));
+        Scanner bondScan = new Scanner(this.getClass().getResourceAsStream("inputfiles/bonds.txt"));
+        Scanner flawsScan = new Scanner(this.getClass().getResourceAsStream("inputfiles/flawsandsecrets.txt"));
+        Scanner highAbScan = new Scanner(this.getClass().getResourceAsStream("inputfiles/highability.txt"));
+        Scanner lowAbScan = new Scanner(this.getClass().getResourceAsStream("inputfiles/lowability.txt"));
+        Scanner idealsScan = new Scanner(this.getClass().getResourceAsStream("inputfiles/ideals.txt"));
+        Scanner interactionScan = new Scanner(this.getClass().getResourceAsStream("inputfiles/interactions.txt"));
+        Scanner mannerismScan = new Scanner(this.getClass().getResourceAsStream("inputfiles/mannerism.txt"));
+        Scanner talentScan = new Scanner(this.getClass().getResourceAsStream("inputfiles/talent.txt"));
         
         //Fill ArrayLists with parsed data.
         while (appearanceScan.hasNext()){
@@ -66,14 +66,7 @@ public class NPCCreator {
     
     
     public static void main(String[] args) throws java.io.FileNotFoundException {
-        
-        
-        
-        //Instantiate scanners for input files.
-        
-        
-        //TODO call npcGUI
-        
+      
     }
     
     
