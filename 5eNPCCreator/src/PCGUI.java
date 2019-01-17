@@ -35,6 +35,9 @@ public class PCGUI extends javax.swing.JFrame {
         classListener = new ClassListener((JTextField)ClassComboBox.getEditor().getEditorComponent(), proficiencyTextField);
         ((JTextField)ClassComboBox.getEditor().getEditorComponent()).getDocument().addDocumentListener(classListener);
         
+        raceListener = new RaceListener((JTextField)RaceComboBox.getEditor().getEditorComponent(), speedTextField);
+        ((JTextField)RaceComboBox.getEditor().getEditorComponent()).getDocument().addDocumentListener(raceListener);
+        
         levelListener = new LevelListener(levelTextField, proficiencyTextField);
         strDocListener = new AbilityScoreListener(strTextField, strFormatTextField);
         dexDocListener = new AbilityScoreListener(dexTextField, dexFormatTextField);
@@ -179,7 +182,7 @@ public class PCGUI extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jTextField20 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        RaceComboBox = new javax.swing.JComboBox<>();
         ClassComboBox = new javax.swing.JComboBox<>();
         jComboBox3 = new javax.swing.JComboBox<>();
         jInternalFrame3 = new javax.swing.JInternalFrame();
@@ -211,7 +214,7 @@ public class PCGUI extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         jTextField26 = new javax.swing.JTextField();
         jLabel26 = new javax.swing.JLabel();
-        jTextField27 = new javax.swing.JTextField();
+        speedTextField = new javax.swing.JTextField();
         jLabel27 = new javax.swing.JLabel();
         jTextField28 = new javax.swing.JTextField();
         proficiencyTextField = new javax.swing.JFormattedTextField();
@@ -366,7 +369,7 @@ public class PCGUI extends javax.swing.JFrame {
                     .addComponent(jLabel8)
                     .addComponent(chaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(chaFormatTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         jLabel1.setText("Character Name");
@@ -391,7 +394,7 @@ public class PCGUI extends javax.swing.JFrame {
 
         jLabel16.setText("Alignment");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Human" }));
+        RaceComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Human" }));
 
         ClassComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard" }));
         ClassComboBox.setToolTipText("");
@@ -415,7 +418,7 @@ public class PCGUI extends javax.swing.JFrame {
                             .addComponent(jLabel11))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(RaceComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(ClassComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -442,7 +445,7 @@ public class PCGUI extends javax.swing.JFrame {
                     .addComponent(jLabel13)
                     .addComponent(jLabel14)
                     .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(RaceComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
@@ -628,7 +631,7 @@ public class PCGUI extends javax.swing.JFrame {
                     .addGroup(jInternalFrame6Layout.createSequentialGroup()
                         .addComponent(jLabel27)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField27))
+                        .addComponent(speedTextField))
                     .addComponent(jTextField28))
                 .addGap(16, 16, 16))
         );
@@ -639,7 +642,7 @@ public class PCGUI extends javax.swing.JFrame {
                     .addComponent(jLabel25)
                     .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel27)
-                    .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(speedTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(4, 4, 4)
                 .addGroup(jInternalFrame6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel26)
@@ -895,6 +898,7 @@ public class PCGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton APGenButton;
     private javax.swing.JComboBox<String> ClassComboBox;
+    private javax.swing.JComboBox<String> RaceComboBox;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JFormattedTextField chaFormatTextField;
@@ -911,7 +915,6 @@ public class PCGUI extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox4;
     private javax.swing.JCheckBox jCheckBox5;
     private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
@@ -970,7 +973,6 @@ public class PCGUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField24;
     private javax.swing.JTextField jTextField25;
     private javax.swing.JTextField jTextField26;
-    private javax.swing.JTextField jTextField27;
     private javax.swing.JTextField jTextField28;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
@@ -979,6 +981,7 @@ public class PCGUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField levelTextField;
     private javax.swing.JFormattedTextField proficiencyTextField;
+    private javax.swing.JTextField speedTextField;
     private javax.swing.JFormattedTextField strFormatTextField;
     private javax.swing.JTextField strTextField;
     private javax.swing.JFormattedTextField wisFormatTextField;
@@ -992,4 +995,5 @@ public class PCGUI extends javax.swing.JFrame {
     private DocumentListener chaDocListener;
     private DocumentListener classListener;
     private DocumentListener levelListener;
+    private DocumentListener raceListener;
 }
