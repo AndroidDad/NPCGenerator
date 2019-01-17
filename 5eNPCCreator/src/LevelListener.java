@@ -34,7 +34,7 @@ public class LevelListener implements DocumentListener{
                 formattedTextField.setText(PCGUI.profMap.get(num));
             }
             else{
-                formattedTextField.setText("Level not valid.");
+                formattedTextField.setText("Level not supported.");
             }
         }
         catch (Exception ex){
@@ -42,7 +42,7 @@ public class LevelListener implements DocumentListener{
                 formattedTextField.setText("");
             }
             else{
-                formattedTextField.setText("N/A");
+                formattedTextField.setText("Level not valid.");
             }
         }
     }
