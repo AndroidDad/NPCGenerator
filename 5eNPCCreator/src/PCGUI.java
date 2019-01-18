@@ -394,7 +394,7 @@ public class PCGUI extends javax.swing.JFrame {
 
         jLabel16.setText("Alignment");
 
-        RaceComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Human" }));
+        RaceComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Human", "Elf", "Dwarf", "Tiefling", "Dragonborn", "Half-Orc", "Half-Elf", "Halfling", "Gnome" }));
 
         ClassComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard" }));
         ClassComboBox.setToolTipText("");

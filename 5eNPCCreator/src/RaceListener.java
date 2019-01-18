@@ -34,11 +34,32 @@ public class RaceListener implements DocumentListener {
                 //Set speed
                 textField2.setText("  30");
             }
-            else if (textField1.getText().equals("")){
-                
+            else if (textField1.getText().equals("Elf")){
+                textField2.setText("  30");
+            }
+            else if (textField1.getText().equals("Dwarf")){
+                textField2.setText("  25");
+            }
+            else if (textField1.getText().equals("Gnome")){
+                textField2.setText("  25");
+            }
+            else if (textField1.getText().equals("Half-Elf")){
+                textField2.setText("  30");
+            }
+            else if (textField1.getText().equals("Half-Orc")){
+                textField2.setText("  30");
+            }
+            else if (textField1.getText().equals("Dragonborn")){
+                textField2.setText("  30");
+            }
+            else if (textField1.getText().equals("Tiefling")){
+                textField2.setText("  30");
+            }
+            else if (textField1.getText().equals("Halfling")){
+                textField2.setText("  30");
             }
             else{
-                    
+                textField2.setText("N/A");
             }
         }
         catch (Exception ex){
